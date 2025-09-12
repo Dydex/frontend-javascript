@@ -1,6 +1,6 @@
-/// <reference path="./Cpp.ts" />
-/// <reference path="./Java.ts" />
-/// <reference path="./React.ts" />
+/// <reference path="./subjects/Cpp.ts" />
+/// <reference path="./subjects/Java.ts" />
+/// <reference path="./subjects/React.ts" />
 
 export const cpp = new Subjects.Cpp();
 export const java = new Subjects.Java();

@@ -12,59 +12,73 @@ export const cTeacher: Teacher = {
   experienceTeachingC: 10,
 };
 
-// Cpp Subject
-export const cpp = {
-  subjectName: 'C++',
-  teacher: null as Teacher | null,
+// Cpp Class
+export class Cpp {
+  subjectName: string = 'C++';
+  teacher: Teacher | null = null;
+
   setTeacher(teacher: Teacher) {
     this.teacher = teacher;
-  },
-  getRequirements() {
+  }
+
+  getRequirements(): string {
     return 'Here is the list of requirements for C++: Basic understanding of programming concepts, knowledge of data structures, and familiarity with object-oriented programming.';
-  },
-  getAvailableTeacher() {
+  }
+
+  getAvailableTeacher(): string {
     if (this.teacher && this.teacher.experienceTeachingC > 0) {
       return `Available Teacher: ${this.teacher.firstName} ${this.teacher.lastName}`;
     }
     return 'No available teacher';
-  },
-};
+  }
+}
 
-// Java Subject
-export const java = {
-  subjectName: 'Java',
-  teacher: null as Teacher | null,
+// Java Class
+export class Java {
+  subjectName: string = 'Java';
+  teacher: Teacher | null = null;
+
   setTeacher(teacher: Teacher) {
     this.teacher = teacher;
-  },
-  getRequirements() {
+  }
+
+  getRequirements(): string {
     return 'Here is the list of requirements for Java: Understanding of OOP principles, basic programming knowledge, and familiarity with Java syntax.';
-  },
-  getAvailableTeacher() {
+  }
+
+  getAvailableTeacher(): string {
     if (this.teacher && this.teacher.experienceTeachingC > 0) {
       return `Available Teacher: ${this.teacher.firstName} ${this.teacher.lastName}`;
     }
     return 'No available teacher';
-  },
-};
+  }
+}
 
-// React Subject
-export const react = {
-  subjectName: 'React',
-  teacher: null as Teacher | null,
+// React Class
+export class React {
+  subjectName: string = 'React';
+  teacher: Teacher | null = null;
+
   setTeacher(teacher: Teacher) {
     this.teacher = teacher;
-  },
-  getRequirements() {
+  }
+
+  getRequirements(): string {
     return 'Here is the list of requirements for React: Knowledge of JavaScript, understanding of HTML/CSS, and familiarity with React components.';
-  },
-  getAvailableTeacher() {
+  }
+
+  getAvailableTeacher(): string {
     if (this.teacher && this.teacher.experienceTeachingC > 0) {
       return `Available Teacher: ${this.teacher.firstName} ${this.teacher.lastName}`;
     }
     return 'No available teacher';
-  },
-};
+  }
+}
+
+// Instantiate the objects
+export const cpp = new Cpp();
+export const java = new Java();
+export const react = new React();
 
 // Cpp operations
 console.log(cpp.subjectName);
